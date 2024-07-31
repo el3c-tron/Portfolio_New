@@ -75,7 +75,7 @@
 
 /* ---------------------------------------------------------------------------------------------------------------------- */
 
-@media ((min-width:0px) and (max-width: 480px)) {
+@media ((min-width:481px) and (max-width: 767px)) {
     .home_container{
         height: 100vh;
         flex-direction: column;

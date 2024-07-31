@@ -4,7 +4,7 @@ import { Board } from "./components/Svgs"
 
 function App() {
 
-  const [loading ,setLoading] = useState(true);
+  const [loading ,setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);

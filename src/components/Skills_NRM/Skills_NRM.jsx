@@ -63,61 +63,64 @@ function Skills_NRM() {
 
                     <div className='nrm_wrapper w-full flex h-full'>
                         <div className='nrm_icons_parent w-full flex'>
-                            <div className='nrm_text justify-center items-center w-[4.25rem] tracking-widest text-[#1a8cff]'>
+                            
+                            <div className='nrm_text_desktop justify-center items-center w-[4.25rem] tracking-widest text-[#1a8cff]'>
                                 <p>OVERVIEW MODE</p>
                             </div>
+                            
+                            
                             <div className='nrm_icons_desktop h-full w-full'>
                                 
                                 <div className='icons_parent_desktop w-full'>
-                                    <div className='icons_div_desktop icons_div_first_desktop flex items-center'>
+                                    <div className='icons_div_desktop flex items-center'>
                                         
                                         <div className='invisible_icon_desktop'></div>
                                         
-                                        <div className='icon_desktop icon_first_desktop icon_1_desktop'>
+                                        <div className='icon_desktop'>
                                             <Typescript />
                                         </div>
 
-                                        <div className='icon_desktop icon_first_desktop icon_2_desktop'>
+                                        <div className='icon_desktop'>
                                             <Nodejs />
                                         </div>
 
-                                        <div className='icon_desktop icon_first_desktop icon_3_desktop'>
+                                        <div className='icon_desktop'>
                                             <Git />
                                         </div>
 
-                                        <div className='icon_desktop icon_first_desktop icon_4_desktop'>
+                                        <div className='icon_desktop'>
                                             <Css />
                                         </div>
                                     </div>
-                                    <div className='icons_div_desktop icons_div_second_desktop flex items-center'>
-                                        <div className='icon_desktop icon_second_desktop icon_5_desktop'>
+                                    <div className='icons_div_desktop flex items-center'>
+                                        <div className='icon_desktop'>
                                             <Reactjs />
                                         </div>
-                                        <div className='icon_desktop icon_second_desktop icon_6_desktop'>
+                                        <div className='icon_desktop'>
                                             <Mongodb />
                                         </div>
-                                        <div className='icon_desktop icon_second_desktop icon_7_desktop'>
+                                        <div className='icon_desktop'>
                                             <Nextjs />
                                         </div>
-                                        <div className='icon_desktop icon_second_desktop icon_8_desktop'>
+                                        <div className='icon_desktop'>
                                             <Mysql />
                                         </div>
-                                        <div className='icon_desktop icon_second_desktop icon_9_desktop'>
+                                        <div className='icon_desktop'>
                                             <Javascript />
                                         </div>
                                     </div>
-                                    <div className='icons_div_desktop icons_div_third_desktop flex items-center'>
+                                    <div className='icons_div_desktop flex items-center'>
                                         
-                                        <div className='icon_desktop icon_third_desktop icon_10_desktop'>
+                                        <div className='icon_desktop'>
                                             <TailwindCSS />
                                         </div>
-                                        <div className='icon_desktop icon_third_desktop icon_11_desktop'>
+                                        <div className='icon_desktop'>
                                             <Html />
                                         </div>
-                                        <div className='icon_desktop icon_third_desktop icon_12_desktop'>
+                                        <div className='icon_desktop'>
                                             <Cpp />
                                         </div>
-                                        <div className='icon_desktop icon_third_desktop icon_13_desktop'>
+                                        <div className='icon_desktop'>
                                             <Express />
                                         </div>
 
@@ -134,21 +137,76 @@ function Skills_NRM() {
                                 </div>
 
                             </div>
-                            <div className='nrm_icons_mobile border-2 border-cyan-600 h-full w-full'>
-                                {/* <Cpp />
-                                <Css />
-                                <Express />
-                                <Git />
-                                <Html />
-                                <Javascript />
-                                <Mongodb />
-                                <Mysql />
-                                <Nextjs />
-                                <Nodejs />
-                                <Reactjs />
-                                <TailwindCSS />
-                                <Typescript /> */}
-                                {/* 3 3 1 3 3 */}
+
+
+                            <div className='nrm_icons_mobile h-full w-full'>
+                                
+                                <div className='nrm_text_mobile tracking-[5px] w-full mt-4'>
+                                    <p>OVERVIEW MODE</p>
+                                </div>
+                                
+                                <div className='icons_parent_mobile w-full h-fit'>
+                                    <div className='icons_div_mobile'>
+                                        <div className='icon_mobile'>
+                                            <Typescript />
+                                        </div>
+                                        <div className='icon_mobile'>
+                                            <Nodejs />
+                                        </div>
+                                        <div className='icon_mobile'>
+                                            <Git />
+                                        </div>
+                                    </div>
+                                    <div className='icons_div_mobile'>
+                                        <div className='icon_mobile'>
+                                            <Css />
+                                        </div>
+                                        <div className='icon_mobile'>
+                                            <Mongodb />
+                                        </div>
+                                        <div className='icon_mobile'>
+                                            <Reactjs />
+                                        </div>
+                                    </div>
+                                    <div className='icons_div_mobile'>
+                                        <div className='invisible_icon_mobile'></div>
+                                        <div className='icon_mobile'>
+                                            <Nextjs />
+                                        </div>
+                                        <div className='invisible_icon_mobile'></div>
+                                    </div>
+                                    <div className='icons_div_mobile'>
+                                        <div className='icon_mobile'>
+                                            <Mysql />
+                                        </div>
+                                        <div className='icon_mobile'>
+                                            <Javascript />
+                                        </div>
+                                        <div className='icon_mobile'>
+                                            <TailwindCSS />
+                                        </div>
+                                    </div>
+                                    <div className='icons_div_mobile'>
+                                        <div className='icon_mobile'>
+                                            <Html />
+                                        </div>
+                                        <div className='icon_mobile'>
+                                            <Cpp />
+                                        </div>
+                                        <div className='icon_mobile'>
+                                            <Express />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className='mb-4'>
+                                    <div className='switch_parent_mobile flex flex-col justify-center items-center'>
+                                        <p className='switch_p_mobile text-white font-light text-[10px] tracking-[3px]'>switch to timeline mode</p>
+                                        <div className='switch_mobile cursor-pointer mt-2 rounded-sm flex justify-start items-center pl-1'>
+                                            <div className='inner_switch_mobile rounded-sm'></div>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>

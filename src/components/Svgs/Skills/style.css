@@ -1,8 +1,23 @@
-@media ((min-width:0px) and (max-width: 480px)) {}
+@media ((min-width:0px) and (max-width: 480px)) {
+    .skills_icon {
+        height: 80px;
+        width: 80px;
+    }
+}
 
-@media ((min-width:0px) and (max-width: 480px)) {}
+@media ((min-width:481px) and (max-width: 767px)) {
+    .skills_icon {
+        height: 80px;
+        width: 80px;
+    }
+}
 
-@media (min-width: 768px) and (max-width: 1000px) {}
+@media (min-width: 768px) and (max-width: 1000px) {
+    .skills_icon {
+        height: 80px;
+        width: 80px;
+    }
+}
 
 @media (min-width: 1000px) and (max-width: 1280px) {
 
@@ -18,9 +33,4 @@
         height: 100px;
         width: 100px;
     }
-}
-
-.skills_icon{
-    height: 100px;
-    width: 100px;
 }
