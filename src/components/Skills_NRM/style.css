@@ -1,0 +1,210 @@
+@media ((min-width:0px) and (max-width: 480px)) {
+    .nrm_sidebar_one{
+        display: none;
+    }
+    .nrm_sidebar_two{
+        display: none;
+    }
+    .nrm_text {
+        display: none;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+@media ((min-width:0px) and (max-width: 480px)) {
+    .nrm_sidebar_one {
+        display: none;
+    }
+
+    .nrm_sidebar_two {
+        display: none;
+    }
+    .nrm_text {
+        display: none;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    .nrm_sidebar_one {
+        display: none;
+    }
+    .nrm_sidebar_two {
+        display: none;
+    }
+    .nrm_text {
+        display: none;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+    .nrm_sidebar_one {
+        display: flex;
+    }
+    .nrm_sidebar_two {
+        display: flex;
+    }
+    .nrm_text {
+        display: flex;
+    }
+    .nrm_icons_desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .icons_parent_desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        /* border: 2px solid white; */
+    }
+
+    .icon_desktop {
+        /* border: 2px solid white; */
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .invisible_icon_desktop {
+        /* border: 2px solid white; */
+        height: 80px;
+        width: 80px;
+    }
+
+    .nrm_icons_mobile {
+        display: none;
+    }
+
+    .icons_div_desktop {
+        /* border: 2px solid white; */
+        width: 80%;
+        height: fit-content;
+        padding: 1rem;
+        justify-content: space-around;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+    }
+
+    .switch_desktop {
+        width: 120px;
+        height: 40px;
+        box-shadow: inset rgba(0, 0, 0, .4) 0px 0px 20px 10px;
+
+    }
+
+    .inner_switch_desktop {
+        width: 24px;
+        height: 24px;
+        box-shadow: 0px 0px 10px 5px #1a8dff4e;
+        background-color: #1a8cff;
+
+    }
+
+    .nrm_icons_mobile {
+        display: none;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 1281px) {
+    .nrm_sidebar_one{
+        display: flex;
+    }
+    .nrm_sidebar_two{
+        display: flex;
+    }
+    .nrm_text {
+        display: flex;
+    }
+    .nrm_icons_desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .icons_parent_desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        /* border: 2px solid white; */
+    }
+    .icon_desktop {
+        /* border: 2px solid white; */
+        height: fit-content;
+        width: fit-content;
+    }
+    .invisible_icon_desktop {
+        /* border: 2px solid white; */
+        height: 100px;
+        width: 100px;
+    }
+    .icon_desktop {
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+    }
+    .icon_desktop:hover {
+        transform: scale(1.1);
+        /* box-shadow: 0px 0px 10px 5px rgba(0,0,0,1); */
+        filter: drop-shadow(0px 0px 10px rgba(0,0,0,1));
+    }
+    
+    .nrm_icons_mobile {
+        display: none;
+    }
+
+    .icons_div_desktop {
+        /* border: 2px solid white; */
+        width: 80%;
+        height: fit-content;
+        padding: 1rem;
+        justify-content: space-around;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+    }
+
+    .switch_desktop {
+        width: 120px;
+        height: 40px;
+        box-shadow: inset rgba(0,0,0,.4) 0px 0px 20px 10px;
+        
+    }
+
+    .inner_switch_desktop {
+        width: 24px;
+        height: 24px;
+        box-shadow: 0px 0px 10px 5px #1a8dff4e;
+        background-color: #1a8cff;
+        
+    }
+    
+    
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+
+
+.nrm_text {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: .8rem;
+    font-weight: 300;
+    width: fit-content;
+    text-shadow: 0px 0px 2px #1a8cff;
+}
+
+.nrm_stars_container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #000D15, #000A10, #030C11, #020B11, #020B11, #020B11, #020B11, #020B11, #020A10, #000000);
+}

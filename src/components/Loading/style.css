@@ -1,0 +1,29 @@
+.loading_container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    animation: sc 1s linear forwards 5s;
+    background: linear-gradient(to bottom right, #000D15, #000A10, #030C11, #020B11, #020B11, #020B11, #020B11, #020B11, #020A10, #000000);
+}
+
+.loading_logoParent{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+}
+
+@keyframes sc {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

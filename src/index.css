@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  /* font-family: "Alegreya", serif; */
+  /* font-family: "Style Script"; */
+  font-family: "Poppins",sans-serif;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: rgba(248, 187, 185, 1);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .1);
+}

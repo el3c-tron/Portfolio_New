@@ -1,0 +1,17 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* animation: sc 1s linear forwards 5s; */
+    background: linear-gradient(to bottom right, #000D15, #000A10, #030C11, #020B11, #020B11, #020B11, #020B11, #020B11, #020A10, #000000);
+}
+
+@keyframes sc {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

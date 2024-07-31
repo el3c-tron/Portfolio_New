@@ -1,0 +1,45 @@
+#board{
+    height: 150px;
+    width: 450px;
+    filter: drop-shadow(0px 0px 4px rgba(0,0,0,.3));
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.board_div {
+    height: 300px;
+    width: 300px;
+    animation: toandfro 5s linear infinite;
+}
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+    #board {
+        height: 100px;
+        width: 300px;
+    }
+    .board_div {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+
+@keyframes toandfro {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
