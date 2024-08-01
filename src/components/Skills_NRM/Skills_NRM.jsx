@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './style.css'
 import { Cpp, Css, Express, Git, Html, Javascript, Mongodb, Mysql, Nextjs, Nodejs, Reactjs, TailwindCSS, Typescript } from '../Svgs'
 
-function Skills_NRM() {
+function Skills_NRM({setOverview}) {
     function random(min, max) {
         return min + Math.random() * (max + 1 - min);
     }
@@ -37,13 +37,71 @@ function Skills_NRM() {
             star.style.width = size + 'px';
             star.style.height = size + 'px';
             star.style.backgroundColor = colour;
+            star.style.opacity = '0.2';
             star.style.boxShadow = `0px 0px 1px .5px rgba(255,255,255,${alpha})`
             star.style.borderRadius = '50%';
             star.style.transition = 'all 2s ease'
             star.animate(temp, temp_timing);
-            container.appendChild(star);
+            // container.appendChild(star);
         }
     }, [])
+
+    useEffect(() => {
+        const icons_desktop = document.querySelectorAll('.icon_desktop');
+        const icons_mobile = document.querySelectorAll('.icon_mobile');
+
+        window.onscroll = () => {
+            icons_desktop.forEach(icon => {
+                let top = window.scrollY;
+                let offset = icon.offsetTop - 700 ;
+
+                if(top >= offset) {
+                    icon.classList.add('appear');
+                }
+                else {
+                    icon.classList.remove('appear');
+                }
+            });
+
+            icons_mobile.forEach(icon => {
+                let top = window.scrollY ;
+                let offset = icon.offsetTop - 1000 ;
+
+                if(top >= offset) {
+                    icon.classList.add('appear');
+                }
+                else {
+                    icon.classList.remove('appear');
+                }
+            });
+        }
+
+    }, [])
+
+    const handleComponentChange = () => {
+        const switch_desktop = document.querySelectorAll('.icons_parent_desktop')[0];
+        const inner_switch = document.querySelectorAll('.inner_switch_desktop')[0];
+        const nrm_text_desktop = document.querySelectorAll('.nrm_text_desktop')[0];
+        inner_switch.classList.add('translate-x-[70px]');
+        inner_switch.classList.add('bg-[#FFADAD]');
+        setTimeout(() => {
+            switch_desktop.classList.add('page_transition_NRM');
+            nrm_text_desktop.classList.add('page_transition_NRM');
+        }, 200)
+        setTimeout(() => {setOverview(false);}, 700)
+
+        
+        setTimeout(() => {
+            inner_switch.classList.remove('translate-x-[70px]');
+            inner_switch.classList.remove('bg-[#FFADAD]');
+            switch_desktop.classList.remove('page_transition_NRM');
+            nrm_text_desktop.classList.remove('page_transition_NRM');
+
+        }, 800)
+        
+    }
+
+
     return (
         <>
             <div className='nrm_stars_container '>
@@ -131,7 +189,7 @@ function Skills_NRM() {
 
                                 <div className='switch_parent_desktop flex flex-col justify-center items-center'>
                                     <p className='switch_p_desktop text-white font-light text-[14px] tracking-[3px]'>switch to timeline mode</p>
-                                    <div className='switch_desktop cursor-pointer mt-2 rounded-md flex justify-start items-center pl-3'>
+                                    <div onClick={handleComponentChange} className='switch_desktop cursor-pointer mt-2 rounded-md flex justify-start items-center pl-3 pr-3'>
                                         <div className='inner_switch_desktop rounded-md'></div>
                                     </div>
                                 </div>
