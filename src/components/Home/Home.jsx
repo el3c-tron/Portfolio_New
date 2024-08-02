@@ -53,7 +53,7 @@ function Home() {
                         </div>
 
                         <div className='overflow-hidden flex ml-[8px] h-full'>
-                            <div className='h-full border-[2px] border-black '></div>
+                            <div className='h-screen border-[2px] border-black '></div>
                         </div>
 
                         
