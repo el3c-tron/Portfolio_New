@@ -145,7 +145,7 @@
 
     .timeline_content_parent_desktop{
         box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .5);
-        border: 1px solid rgba(255,255,255,.5);
+        border: 1px solid rgba(255,255,255,1);
         height: 375px;
         width: 500px;
         margin-left: 8rem;
@@ -160,8 +160,42 @@
         width: 100%;
     }
     .timeline_project_desktop {
-        /* background-color: rgba(1, 9, 16,.6); */
-        background-color: rgba(0,0,0,.2);
+       /* border: 2px solid red; */
+       padding: 2rem;
+    }
+    .project_title_desktop {
+        /* border: 2px solid white; */
+        /* padding: .5rem; */
+        font-weight:600;
+        letter-spacing: .2rem;
+        font-size: 1.2rem;
+        color: #E69C9C;
+        text-shadow: 0px 0px 2px #E69C9C;
+    }
+
+    .project_description_desktop {
+        /* border: 2px solid white; */
+        /* padding: .5rem; */
+        font-weight: 200;
+        font-size: 14px;
+        letter-spacing: 1px;
+
+    }
+
+    .project_text_desktop {
+        font-weight: 400;
+        font-size: 14px;
+        margin-right: 4px;
+        
+    }
+
+    .project_tags_desktop {
+        font-weight: 200;
+        font-size: 14px;
+        padding: 4px 6px;
+        margin-left: 6px;
+        letter-spacing: 1.5px;
+        background-color: rgba(23,27,29,.7);
     }
 
     .timeline_content_view {

@@ -17,6 +17,8 @@ import Nodejs from "./Skills/Nodejs.jsx";
 import TailwindCSS from "./Skills/TailwindCSS.jsx";
 import Typescript from "./Skills/Typescript.jsx";
 import ScrollVertical from "./ScrollVertical/ScrollVertical.jsx";
+import ReadMore from "./ReadMore/ReadMore.jsx";
+import Cross from "./Cross/Cross.jsx";
 
 export {
     Logo,
@@ -37,5 +39,8 @@ export {
     Nodejs,
     TailwindCSS,
     Typescript,
-    ScrollVertical
+    ScrollVertical,
+    ReadMore,
+    Cross
+
 }

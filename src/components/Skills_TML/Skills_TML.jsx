@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './style.css'
-import { ScrollVertical } from '../Svgs';
+import { Cross, ReadMore, ScrollVertical } from '../Svgs';
 import data from '../../data/skillsContent.json'
 import tagsColor from '../../data/tags.json'
 
@@ -51,6 +51,9 @@ function Skills_TML({setOverview}) {
 //             container.appendChild(star);
 //         }
 //     }, [])
+
+
+    
 
     const handleComponentChange = () => {
         const timeline_parent_desktop = document.querySelectorAll('.timeline_parent_desktop')[0];
@@ -132,7 +135,7 @@ function Skills_TML({setOverview}) {
             let z = timeline_months_desktop.scrollTop;
             
             
-
+            // timeline_content_desktop.scrollTop = x*y;
             timeline_months_desktop.scrollTop = x*y;
 
             if(x >=0 && x <= 2) timeline_years_desktop.scrollTop = 0 * timeline_years_desktop.offsetHeight;
@@ -199,24 +202,47 @@ function Skills_TML({setOverview}) {
                             <div className="timeline_content_desktop rounded-lg flex-shrink-0 text-white overflow-y-scroll overflow-x-hidden scroll-smooth">
                                 
                                 {
-                                    data.map((project, index) => (
-                                        <div key={index} className='timeline_project_desktop rounded-lg blur w-full h-full flex flex-col justify-evenly flex-shrink-0'>
-                                            <p>
-                                                {project.title}
-                                            </p>
-                                            <p>
-                                                {project.description}
-                                            </p>
-                                            <div key={index} className='w-fit h-fit flex'>
-                                                {
-                                                    project.tags.map((tag, index) => (
-                                                            <p className='p-1'>{tag}</p>
-                                                    ))
-                                                }
-                                            </div>
-                                        </div>
+                                    data.map((project, index) => {
+                                        const [seeAll, setSeeAll] = useState(false);
+                                        return (
+                                            <div key={index} className='timeline_project_desktop blur relative rounded-lg w-full h-full flex flex-col justify-between flex-shrink-0'>
+                                                <p className='project_title_desktop'>
+                                                    {project.title}
+                                                </p>
+                                                <p className='project_description_desktop'>
+                                                    {project.description}
+                                                </p>
+                                                <div key={index} className='project_technologies_desktop w-fit h-fit flex items-center'>
+                                                    <span className='project_text_desktop flex-shrink-0'>Technologies : </span>
+                                                    {
+                                                        project.tags.map((tag, index) => (
+                                                            (index <= 2) ? (<p key={index} className='project_tags_desktop rounded-lg' style={{'color': tagsColor[tag]}}>{tag}</p>) : (<></>)
+                                                        ))
+                                                    }
+                                                    {
+                                                        (project.tags.length > 3) ? (
+                                                            <div onClick={() => {setSeeAll(true)}} title='see all' className='tags_readmore_desktop ml-2 cursor-pointer'>
+                                                                <ReadMore />
+                                                            </div>
+                                                        ) : (<></>)
+                                                    }
+                                                </div>
+                                                <div className={`${((seeAll) ? 'flex flex-wrap' : ' hidden')} items-center justify-center w-full absolute bottom-5 left-0 bg-[rgba(0,0,0,1)]`}>
 
-                                    ))
+                                                    {
+                                                        project.tags.map((tag, index) => (
+                                                            (<p key={index} className='project_tags_desktop rounded-lg ml-2 mt-2 mb-2' style={{'color': tagsColor[tag]}}>{tag}</p>)
+                                                        ))
+                                                    }
+                                                    <div onClick={() => {setSeeAll(false)}} className='h-fit w-fit ml-2 border-2 rounded-full cursor-pointer'>
+                                                        <Cross />
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        )
+
+                                    })
                                 }
 
 
