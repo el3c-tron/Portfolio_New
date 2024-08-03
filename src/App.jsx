@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Home, Loading, Skills_NRM, Skills_TML } from "./components"
+import {Test} from './components'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       setLoading(false);
     }, 6500)
   }, [])
+  
 
   return (loading) ? (<Loading />) : (
     <>
@@ -19,6 +21,7 @@ function App() {
       {
         (overview) ? (<Skills_NRM setOverview = {setOverview} />) : (<Skills_TML setOverview = {setOverview} />)
       }
+      
     </>
   )
 }

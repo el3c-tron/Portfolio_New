@@ -16,7 +16,7 @@ import Reactjs from "./Skills/Reactjs.jsx";
 import Nodejs from "./Skills/Nodejs.jsx";
 import TailwindCSS from "./Skills/TailwindCSS.jsx";
 import Typescript from "./Skills/Typescript.jsx";
-
+import ScrollVertical from "./ScrollVertical/ScrollVertical.jsx";
 
 export {
     Logo,
@@ -36,5 +36,6 @@ export {
     Reactjs,
     Nodejs,
     TailwindCSS,
-    Typescript
+    Typescript,
+    ScrollVertical
 }

@@ -104,6 +104,78 @@
         justify-content: space-around;
     }
 
+    .timeline_parent_desktop {
+        margin-top: 4.3rem;
+    }
+
+    .timeline_years_desktop {
+        display: flex;
+        flex-direction: column;
+        font-weight: 700;
+        letter-spacing: 1rem;
+        font-size: 1.2rem;
+        text-shadow: 0px 0px 5px rgba(255,255,255,.3);
+        margin-right: 4rem;
+    }
+
+    .timeline_border_desktop {
+        padding: 1px;
+        background: linear-gradient(to bottom,rgba(255, 255, 255, .2),rgba(255, 255, 255, .6),rgba(255, 255, 255, .8),rgba(255,255,255,1),rgba(255, 255, 255,.8),rgba(255, 255, 255, .6) ,rgba(255, 255, 255, .4),rgba(255, 255, 255, .2));
+    }
+
+    .timeline_months_desktop {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        letter-spacing: 1rem;
+        font-size: 1.2rem;
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, .3);
+        margin-left: 4rem;
+    }
+
+    .timeline_content_parent_desktop{
+        box-shadow: 0px 0px 20px 1px rgba(230, 156, 156, .1);
+        height: 375px;
+        width: 500px;
+        margin-left: 8rem;
+    }
+
+    .timeline_content_desktop {
+        height: 100%;
+        width: 100%;
+    }
+
+    .timeline_content_view {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.2);
+        
+        border-radius: 0.375rem;
+        flex-shrink: 0;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        transform: translateX(-100%);
+    }
+
+    .scroll_text_dekstop {
+        color: white;
+        font-weight: 700;
+        letter-spacing: .5rem;
+        font-size: .8rem;
+    }
+
+    .scroll_button_desktop {
+        color: #1a8cff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 1rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        border-radius: 0.375rem;
+        font-size: .8rem;
+    }
+
     
 }
 
@@ -118,6 +190,7 @@
     font-weight: 300;
     width: fit-content;
     text-shadow: 0px 0px 2px #E69C9C;
+    transition: all .5s linear;
 }
 
 

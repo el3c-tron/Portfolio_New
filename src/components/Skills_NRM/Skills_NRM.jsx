@@ -99,10 +99,10 @@ function Skills_NRM({setOverview}) {
 
         setTimeout(() => {
             icons_parent_desktop.classList.add('page_transition_NRM');
-            nrm_text_desktop.classList.add('page_transition_NRM');
+            nrm_text_desktop.classList.add('translate-x-[-100%]');
 
             icons_parent_mobile.classList.add('page_transition_NRM');
-            nrm_text_mobile.classList.add('page_transition_NRM');
+            nrm_text_mobile.classList.add('translate-x-[-100%]');
         }, 200)
         setTimeout(() => {setOverview(false);}, 700)
 
@@ -112,7 +112,7 @@ function Skills_NRM({setOverview}) {
             inner_switch_desktop.classList.remove('bg-[#FFADAD]');
             inner_switch_desktop.classList.remove('shadow-[0px_0px_10px_5px_#ffadad50]')
             icons_parent_desktop.classList.remove('page_transition_NRM');
-            nrm_text_desktop.classList.remove('page_transition_NRM');
+            nrm_text_desktop.classList.remove('translate-x-[-100%]');
             inner_switch_desktop.classList.add('bg-[#1a8cff]')
             inner_switch_desktop.classList.add('shadow-[0px_0px_10px_5px_#1a8dff4e]')
 
@@ -120,7 +120,7 @@ function Skills_NRM({setOverview}) {
             inner_switch_mobile.classList.remove('bg-[#FFADAD]');
             inner_switch_mobile.classList.remove('shadow-[0px_0px_10px_5px_#ffadad50]')
             icons_parent_mobile.classList.remove('page_transition_NRM');
-            nrm_text_mobile.classList.remove('page_transition_NRM');
+            nrm_text_mobile.classList.remove('translate-x-[-100%]');
             inner_switch_mobile.classList.add('bg-[#1a8cff]')
             inner_switch_mobile.classList.add('shadow-[0px_0px_10px_5px_#1a8dff4e]')
 

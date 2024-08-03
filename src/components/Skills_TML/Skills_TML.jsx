@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import './style.css'
+import { ScrollVertical } from '../Svgs';
 
 function Skills_TML({setOverview}) {
 
@@ -47,7 +48,7 @@ function Skills_TML({setOverview}) {
 //     }, [])
 
     const handleComponentChange = () => {
-        // const icons_parent_desktop = document.querySelectorAll('.icons_parent_desktop')[0];
+        const timeline_parent_desktop = document.querySelectorAll('.timeline_parent_desktop')[0];
         // const icons_parent_mobile = document.querySelectorAll('.icons_parent_mobile')[0];
         const tml_inner_switch_desktop = document.querySelectorAll('.tml_inner_switch_desktop')[0];
         // const inner_switch_mobile = document.querySelectorAll('.inner_switch_mobile')[0];
@@ -68,8 +69,8 @@ function Skills_TML({setOverview}) {
         // inner_switch_mobile.classList.add('shadow-[0px_0px_10px_5px_#ffadad50]')
 
         setTimeout(() => {
-            // icons_parent_desktop.classList.add('page_transition_NRM');
-            tml_text_desktop.classList.add('page_transition_TML');
+            timeline_parent_desktop.classList.add('page_transition_TML');
+            tml_text_desktop.classList.add('translate-x-[-100%]');
 
             // icons_parent_mobile.classList.add('page_transition_NRM');
             // nrm_text_mobile.classList.add('page_transition_NRM');
@@ -83,8 +84,8 @@ function Skills_TML({setOverview}) {
             tml_inner_switch_desktop.classList.remove('translate-x-[-300%]');
             tml_inner_switch_desktop.classList.add('bg-[#FFADAD]');
             tml_inner_switch_desktop.classList.add('shadow-[0px_0px_10px_5px_#ffadad50]')
-            // tml_icons_parent_desktop.classList.remove('page_transition_NRM');
-            tml_text_desktop.classList.remove('page_transition_TML');
+            timeline_parent_desktop.classList.remove('page_transition_TML');
+            tml_text_desktop.classList.remove('translate-x-[-100%]');
             
 
             // inner_switch_mobile.classList.remove('translate-x-[300%]');
@@ -99,10 +100,16 @@ function Skills_TML({setOverview}) {
         
     }
 
+    const handleGotit = (e) => {
+        e.preventDefault();
+        const timeline_content_view = document.querySelectorAll('.timeline_content_view')[0];
+        timeline_content_view.classList.add('hidden');
+    }
+
   return (
     <>
       <div className="tml_stars_container">
-        <div className="tml_container h-full">
+        <div className="tml_container h-screen w-full flex flex-col">
           <div className='tml_sidebar_one items-end w-screen h-fit ml-[4.25rem] '>
               <div className='flex h-fit'>
                   <div className='h-[60px] border-[2px] border-white '></div>
@@ -123,10 +130,32 @@ function Skills_TML({setOverview}) {
                     <p>TIMELINE MODE</p>
                 </div>
                 
-                <div className='tml_timeline_desktop h-full w-full'>
+                <div className='tml_timeline_desktop h-full w-full flex flex-col justify-around'>
+
+                    {/* <ScrollVertical /> */}
+                    <div className='timeline_parent_desktop w-full flex items-center justify-center'>
+
+                        <div className="timeline_years_desktop text-white">Year</div>
+                        <div className="timeline_border_desktop h-full"></div>
+                        <div className="timeline_months_desktop text-white">Months</div>
+                        <div className='timeline_content_parent_desktop rounded-md flex'>
+
+                            <div className="timeline_content_desktop rounded-md flex-shrink-0"></div>
+                            <div className='timeline_content_view '>
+                                <ScrollVertical />
+                                <span className='scroll_text_dekstop'>SCROLL DOWN HERE</span>
+                                <button onClick={handleGotit} className='scroll_button_desktop'>
+                                    Got it
+                                </button>
+                            </div>
+
+                        </div>
+                        
+
+                    </div>
 
                     <div className='tml_switch_parent_desktop flex flex-col justify-center items-center'>
-                        <p className='tml_switch_p_desktop text-white font-light text-[14px] tracking-[3px]'>switch to timeline mode</p>
+                        <p className='tml_switch_p_desktop text-white font-light text-[14px] tracking-[3px]'>switch to overview mode</p>
                         <div onClick={handleComponentChange} className='tml_switch_desktop cursor-pointer mt-2 rounded-md flex justify-end items-center pl-3 pr-3'>
                             <div className='tml_inner_switch_desktop rounded-md shadow-[0px_0px_10px_5px_#ffadad50] bg-[#FFADAD] '></div>
                         </div>

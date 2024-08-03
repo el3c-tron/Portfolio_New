@@ -1,0 +1,19 @@
+{
+    "HTML" : "rgb(227, 76, 38)",
+    "CSS" : "rgb(0, 153, 255)",
+    "ReactJS" : "rgb(77, 184, 255)",
+    "Javascript" : "rgb(255, 255, 0)",
+    "TailwindCSS" : "rgb(0, 153, 255)",
+    "MongoDB" : "rgb(0, 153, 51)",
+    "mongoose" : "rgb(0, 153, 0)",
+    "NodeJS" : "rgb(60, 135, 58)",
+    "ExpressJS" : "rgb(255,255,255)",
+    "NextJS" : "rgb(255,255,255)",
+    "mySQL" : "rgb(128, 0, 255)",
+    "Prisma" : "rgb(255,255,255)",
+    "TypeScript" : "rgb(77, 184, 255)",
+    "EJS" : "rgb(255, 0, 102)",
+    "Socket.io" : "rgb(255,255,255)",
+    "Encryption" : "rgb(255, 51, 51)",
+    "REST-Api" : "rgb(255, 0, 102)"
+}
