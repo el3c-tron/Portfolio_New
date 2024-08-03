@@ -31,7 +31,7 @@
     },
     {
         "title" : "Connect",
-        "description" : "Enabled users to connect and communicate seamlessly through web-based chat. Implemented end-to-end encryption using the Diffie-Hellman key exchange and AES-256 encryption algorithms to secure users messages. Ensured that all user communications are protected and inaccessible to unauthorized parties.",
+        "description" : "Enabled users to connect and communicate seamlessly through web-based chat. Implemented end-to-end encryption using the Diffie-Hellman key exchange and AES-256 encryption algorithms to secure users messages.",
         "tags" : ["ReactJS", "MongoDB", "mongoose", "NodeJS", "ExpressJS", "Javascript", "Socket.io", "Encryption", "CSS"]
     },
     {

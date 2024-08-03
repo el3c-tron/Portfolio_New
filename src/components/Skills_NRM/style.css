@@ -266,7 +266,7 @@
 .icon_desktop {
     height: fit-content;
     width: fit-content;
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
     cursor: pointer;
     transform: scale(.5);
     opacity: 0;

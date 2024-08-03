@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react'
 import './style.css'
 import { ScrollVertical } from '../Svgs';
+import data from '../../data/skillsContent.json'
+import tagsColor from '../../data/tags.json'
+
+const years = ["2024", "2023", "2022", "2021"];
+const months = ["July", "June", "May", "October", "August", "June", "November", "September", "July", "June", "May", "April", "March", "February"];
 
 function Skills_TML({setOverview}) {
 
@@ -103,8 +108,41 @@ function Skills_TML({setOverview}) {
     const handleGotit = (e) => {
         e.preventDefault();
         const timeline_content_view = document.querySelectorAll('.timeline_content_view')[0];
+        const timeline_project_desktop = document.querySelectorAll('.timeline_project_desktop');
+
+        timeline_project_desktop.forEach((project) => {
+            project.classList.remove('blur');
+        })
+
+
+        
         timeline_content_view.classList.add('hidden');
     }
+
+    useEffect(() => {
+        const timeline_content_desktop = document.querySelectorAll('.timeline_content_desktop')[0];
+        const timeline_months_desktop = document.querySelectorAll('.timeline_months_desktop')[0];
+        const timeline_years_desktop = document.querySelectorAll('.timeline_years_desktop')[0];
+
+        timeline_content_desktop.addEventListener('scroll', (e) => {
+            let x = Math.floor((e.target.scrollTop + (e.target.offsetHeight/2)) / e.target.offsetHeight);
+            
+
+            let y = timeline_months_desktop.offsetHeight;
+            let z = timeline_months_desktop.scrollTop;
+            
+            
+
+            timeline_months_desktop.scrollTop = x*y;
+
+            if(x >=0 && x <= 2) timeline_years_desktop.scrollTop = 0 * timeline_years_desktop.offsetHeight;
+            else if(x >=3 && x <= 5) timeline_years_desktop.scrollTop = 1 * timeline_years_desktop.offsetHeight;
+            else if(x >=6 && x <= 7) timeline_years_desktop.scrollTop = 2 * timeline_years_desktop.offsetHeight;
+            else if(x >=8 && x <= 13) timeline_years_desktop.scrollTop = 3 * timeline_years_desktop.offsetHeight;
+            
+            
+        })
+    }, [])
 
   return (
     <>
@@ -135,13 +173,56 @@ function Skills_TML({setOverview}) {
                     {/* <ScrollVertical /> */}
                     <div className='timeline_parent_desktop w-full flex items-center justify-center'>
 
-                        <div className="timeline_years_desktop text-white">Year</div>
+                        <div className="timeline_years_desktop overflow-hidden scroll-smooth flex flex-col items-center">
+                            {
+                                years.map((year, index) => (
+                                <p key={index} className='pt-2 pb-2 h-full w-full flex flex-shrink-0 justify-center items-center'>
+                                    {year}
+                                </p>
+                                ))
+                            }
+                        </div>
                         <div className="timeline_border_desktop h-full"></div>
-                        <div className="timeline_months_desktop text-white">Months</div>
-                        <div className='timeline_content_parent_desktop rounded-md flex'>
+                        <div className="timeline_months_desktop text-white overflow-hidden scroll-smooth flex flex-col items-center">
 
-                            <div className="timeline_content_desktop rounded-md flex-shrink-0"></div>
-                            <div className='timeline_content_view '>
+                            {
+                                months.map((month ,index) => (
+                                <p key={index} className='pt-2 pb-2 h-full w-full flex flex-shrink-0 justify-center items-center'>
+                                    {month}
+                                </p>
+                                ))
+                            }
+
+                        </div>
+                        <div className='timeline_content_parent_desktop rounded-lg flex'>
+
+                            <div className="timeline_content_desktop rounded-lg flex-shrink-0 text-white overflow-y-scroll overflow-x-hidden scroll-smooth">
+                                
+                                {
+                                    data.map((project, index) => (
+                                        <div key={index} className='timeline_project_desktop rounded-lg blur w-full h-full flex flex-col justify-evenly flex-shrink-0'>
+                                            <p>
+                                                {project.title}
+                                            </p>
+                                            <p>
+                                                {project.description}
+                                            </p>
+                                            <div key={index} className='w-fit h-fit flex'>
+                                                {
+                                                    project.tags.map((tag, index) => (
+                                                            <p className='p-1'>{tag}</p>
+                                                    ))
+                                                }
+                                            </div>
+                                        </div>
+
+                                    ))
+                                }
+
+
+                            </div>
+
+                            <div className='timeline_content_view rounded-lg'>
                                 <ScrollVertical />
                                 <span className='scroll_text_dekstop'>SCROLL DOWN HERE</span>
                                 <button onClick={handleGotit} className='scroll_button_desktop'>

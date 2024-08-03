@@ -79,6 +79,7 @@
         align-items: center;
         justify-content: space-around;
     }
+    
 
 }
 
@@ -112,14 +113,19 @@
         display: flex;
         flex-direction: column;
         font-weight: 700;
-        letter-spacing: 1rem;
+        letter-spacing: .8rem;
         font-size: 1.2rem;
-        text-shadow: 0px 0px 5px rgba(255,255,255,.3);
+        text-shadow: 0px 0px 5px rgba(26, 140, 255, .3);
         margin-right: 4rem;
+        height: 2rem;
+        width: fit-content;
+        color: rgba(26, 140, 255,1);
+        /* border: 2px solid white; */
     }
 
     .timeline_border_desktop {
         padding: 1px;
+        border-radius: 0.3rem;
         background: linear-gradient(to bottom,rgba(255, 255, 255, .2),rgba(255, 255, 255, .6),rgba(255, 255, 255, .8),rgba(255,255,255,1),rgba(255, 255, 255,.8),rgba(255, 255, 255, .6) ,rgba(255, 255, 255, .4),rgba(255, 255, 255, .2));
     }
 
@@ -127,30 +133,41 @@
         display: flex;
         flex-direction: column;
         font-weight: 600;
-        letter-spacing: 1rem;
+        letter-spacing: .5rem;
         font-size: 1.2rem;
         text-shadow: 0px 0px 5px rgba(255, 255, 255, .3);
-        margin-left: 4rem;
+        margin-left: 2rem;
+        height: 2rem;
+        width: fit-content;
+        /* border: 2px solid white */
+        
     }
 
     .timeline_content_parent_desktop{
-        box-shadow: 0px 0px 20px 1px rgba(230, 156, 156, .1);
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .5);
+        border: 1px solid rgba(255,255,255,.5);
         height: 375px;
         width: 500px;
         margin-left: 8rem;
+    }
+
+    .timeline_content_desktop::-webkit-scrollbar{
+        display: none;
     }
 
     .timeline_content_desktop {
         height: 100%;
         width: 100%;
     }
+    .timeline_project_desktop {
+        /* background-color: rgba(1, 9, 16,.6); */
+        background-color: rgba(0,0,0,.2);
+    }
 
     .timeline_content_view {
         height: 100%;
         width: 100%;
-        background-color: rgba(0,0,0,0.2);
-        
-        border-radius: 0.375rem;
+        background-color: rgba(0,0,0,.3);
         flex-shrink: 0;
         flex-direction: column;
         display: flex;
