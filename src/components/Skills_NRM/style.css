@@ -27,13 +27,13 @@
         /* border: 2px solid white; */
         display: flex;
         justify-content: space-evenly;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .invisible_icon_mobile {
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 60px;
     }
 
     .nrm_icons_desktop {

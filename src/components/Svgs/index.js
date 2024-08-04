@@ -19,6 +19,8 @@ import Typescript from "./Skills/Typescript.jsx";
 import ScrollVertical from "./ScrollVertical/ScrollVertical.jsx";
 import ReadMore from "./ReadMore/ReadMore.jsx";
 import Cross from "./Cross/Cross.jsx";
+import SwipeRight from "./SwipeRight/SwipeRight.jsx";
+
 
 export {
     Logo,
@@ -41,6 +43,7 @@ export {
     Typescript,
     ScrollVertical,
     ReadMore,
-    Cross
+    Cross,
+    SwipeRight
 
 }
