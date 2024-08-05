@@ -1,0 +1,105 @@
+@media ((min-width:0px) and (max-width: 480px)) {
+    .projects_sidebar_one {
+        display: none;
+    }
+
+    .projects_wrapper_desktop {
+        display: none;
+    }
+}
+
+@media ((min-width:481px) and (max-width: 767px)) {
+    .projects_sidebar_one {
+        display: none;
+    }
+
+    .projects_wrapper_desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    .projects_sidebar_one {
+        display: none;
+    }
+
+    .projects_wrapper_desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+    
+}
+
+@media (min-width: 1281px) {
+    .projects_sidebar_one {
+        display: flex;
+    }
+    .projects_wrapper_desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: fit-content;
+        margin-top: 1rem;
+        padding: 0rem 4rem;
+        /* border: 2px solid black; */
+    }
+    .projects_parent_desktop {
+        /* border: 2px solid black; */
+        padding: 2rem 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .projects_desktop {
+        /* border: 2px solid red; */
+        width: 100%;
+        padding: 2rem 0rem;
+        height: fit-content;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* .projects_left_desktop {
+        border: 2px solid indigo;
+    } */
+    .projects_right_desktop {
+        /* border: 2px solid purple; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .project_big_desktop {
+        width: 780px;
+        height: 700px;
+        border: 3px solid black;
+        box-shadow: 0px 0px 20px 5px rgba(50, 50, 50, 0.3);
+        border-radius: 10px;
+    }
+    
+    .project_medium_desktop {
+        width: 408px;
+        height: 375px;
+        border: 2px solid black;
+        box-shadow: 0px 0px 20px 5px rgba(50, 50, 50, 0.2);
+        border-radius: 10px;
+    }
+
+    .project_small_desktop {
+        width: 408px;
+        height: 266px;
+        border: 1px solid black;
+        box-shadow: 0px 0px 20px 5px rgba(50, 50, 50, 0.1);
+        border-radius: 10px;
+    }
+
+}
+
+.projects_container {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 1) 0%, rgba(248, 248, 248, 1) 25%, rgba(245, 245, 245, 1) 50%, rgba(240, 240, 240, 1) 75%, rgba(240, 240, 240, 1) 100%);
+}
