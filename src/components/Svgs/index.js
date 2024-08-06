@@ -20,7 +20,8 @@ import ScrollVertical from "./ScrollVertical/ScrollVertical.jsx";
 import ReadMore from "./ReadMore/ReadMore.jsx";
 import Cross from "./Cross/Cross.jsx";
 import SwipeRight from "./SwipeRight/SwipeRight.jsx";
-
+import UpArrow from "./UpArrow/UpArrow.jsx";
+import DownArrow from "./DownArrow/DownArrow.jsx";
 
 export {
     Logo,
@@ -44,6 +45,9 @@ export {
     ScrollVertical,
     ReadMore,
     Cross,
-    SwipeRight
+    SwipeRight,
+    DownArrow,
+    UpArrow
+
 
 }

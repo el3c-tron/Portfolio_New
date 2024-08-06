@@ -726,12 +726,13 @@
     }
 
     .project_tags_desktop {
-        font-weight: 300;
-        font-size: 14px;
-        padding: 4px 6px;
-        margin-left: 6px;
-        letter-spacing: 1.5px;
-        background-color: rgba(23,27,29,.7);
+        font-weight: 400;
+        font-size: 11px;
+        padding: .5rem 1rem;
+        margin-left: 1rem;
+        letter-spacing: 1.7px;
+        background-color: rgba(23, 27, 29, .5);
+        text-shadow: 0px 0px 1px rgba(255,255,255,.3);
     }
 
     .timeline_content_view {

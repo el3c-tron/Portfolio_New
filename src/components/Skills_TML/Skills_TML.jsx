@@ -3,6 +3,7 @@ import './style.css'
 import { Cross, ReadMore, ScrollVertical, SwipeRight } from '../Svgs';
 import data from '../../data/skillsContent.json'
 import tagsColor from '../../data/tags.json'
+import Marquee from 'react-fast-marquee';
 
 const years = ["2024", "2023", "2022", "2021"];
 const months = ["July", "June", "May", "October", "August", "June", "November", "September", "July", "June", "May", "April", "March", "February"];
@@ -242,29 +243,31 @@ function Skills_TML({setOverview}) {
                                     data.map((project, index) => {
                                         const [seeAll, setSeeAll] = useState(false);
                                         return (
-                                            <div key={index} className='timeline_project_desktop blur relative rounded-lg w-full h-full flex flex-col justify-between flex-shrink-0'>
+                                            <div key={index} className='timeline_project_desktop blur rounded-lg w-full h-full flex flex-col justify-between flex-shrink-0'>
                                                 <p className='project_title_desktop'>
                                                     {project.title}
                                                 </p>
                                                 <p className='project_description_desktop'>
                                                     {project.description}
                                                 </p>
-                                                <div key={index} className='project_technologies_desktop w-fit h-fit flex items-center'>
-                                                    <span className='project_text_desktop flex-shrink-0'>Technologies : </span>
-                                                    {
-                                                        project.tags.map((tag, index) => (
-                                                            (index <= 2) ? (<p key={index} className='project_tags_desktop rounded-lg' style={{'color': tagsColor[tag], 'textShadow': `0px 0px 3px ${tagsColor[tag]}`}}>{tag}</p>) : (<></>)
-                                                        ))
-                                                    }
-                                                    {
+                                                <div key={index} className='project_technologies_desktop w-full h-fit flex items-center overflow-hidden'>
+                                                    {/* <span className='project_text_desktop flex-shrink-0'>Technologies : </span> */}
+                                                    <Marquee>
+                                                        {
+                                                            project.tags.map((tag, index) => (
+                                                                <p key={index} className='project_tags_desktop font-normal rounded-md flex-shrink-0' style={{'color': tagsColor[tag]}}>{tag}</p>
+                                                            ))
+                                                        }
+                                                    </Marquee>
+                                                    {/* {
                                                         (project.tags.length > 3) ? (
                                                             <div onClick={() => {setSeeAll(true)}} title='see all' className='tags_readmore_desktop ml-2 cursor-pointer'>
                                                                 <ReadMore />
                                                             </div>
                                                         ) : (<></>)
-                                                    }
+                                                    } */}
                                                 </div>
-                                                <div className={`${((seeAll) ? 'flex flex-wrap' : ' hidden')} items-center justify-center w-full absolute bottom-5 left-0 bg-[rgba(0,0,0,1)]`}>
+                                                {/* <div className={`${((seeAll) ? 'flex flex-wrap' : ' hidden')} items-center justify-center w-full absolute bottom-5 left-0 bg-[rgba(0,0,0,1)]`}>
 
                                                     {
                                                         project.tags.map((tag, index) => (
@@ -275,7 +278,7 @@ function Skills_TML({setOverview}) {
                                                         <Cross />
                                                     </div>
 
-                                                </div>
+                                                </div> */}
                                             </div>
                                         )
 
@@ -351,33 +354,35 @@ function Skills_TML({setOverview}) {
                                                 <p className='project_description_mobile'>
                                                     {project.description}
                                                 </p>
-                                                <div key={index} className='project_technologies_mobile w-fit h-fit flex items-center'>
-                                                    <span className='project_text_mobile flex-shrink-0'>Technologies : </span>
-                                                    {
-                                                        project.tags.map((tag, index) => (
-                                                            (index < 2) ? (<p key={index} className='project_tags_mobile rounded-md' style={{'color': tagsColor[tag], 'textShadow': `0px 0px 3px ${tagsColor[tag]}`}}>{tag}</p>) : (<></>)
-                                                        ))
-                                                    }
-                                                    {
-                                                        (project.tags.length > 2) ? (
-                                                            <div onClick={() => {setSeeAll(true)}} title='see all' className='tags_readmore_mobile ml-2 cursor-pointer'>
+                                                <div key={index} className='project_technologies_mobile w-full h-fit flex items-center overflow-hidden'>
+                                                    {/* <span className='project_text_desktop flex-shrink-0'>Technologies : </span> */}
+                                                    <Marquee>
+                                                        {
+                                                            project.tags.map((tag, index) => (
+                                                                <p key={index} className='project_tags_mobile rounded-md flex-shrink-0' style={{'color': tagsColor[tag]}}>{tag}</p>
+                                                            ))
+                                                        }
+                                                    </Marquee>
+                                                    {/* {
+                                                        (project.tags.length > 3) ? (
+                                                            <div onClick={() => {setSeeAll(true)}} title='see all' className='tags_readmore_desktop ml-2 cursor-pointer'>
                                                                 <ReadMore />
                                                             </div>
                                                         ) : (<></>)
-                                                    }
+                                                    } */}
                                                 </div>
-                                                <div className={`${((seeAll) ? 'flex flex-wrap' : ' hidden')} items-center justify-center w-full absolute bottom-5 left-0 bg-[rgba(0,0,0,1)]`}>
+                                                {/* <div className={`${((seeAll) ? 'flex flex-wrap' : ' hidden')} items-center justify-center w-full absolute bottom-5 left-0 bg-[rgba(0,0,0,1)]`}>
 
                                                     {
                                                         project.tags.map((tag, index) => (
-                                                            (<p key={index} className='project_tags_mobile rounded-md ml-2 mt-2 mb-2' style={{'color': tagsColor[tag], 'textShadow': `0px 0px 2px ${tagsColor[tag]}`}}>{tag}</p>)
+                                                            (<p key={index} className='project_tags_desktop rounded-lg ml-2 mt-2 mb-2' style={{'color': tagsColor[tag], 'textShadow': `0px 0px 3px ${tagsColor[tag]}`}}>{tag}</p>)
                                                         ))
                                                     }
-                                                    <div onClick={() => {setSeeAll(false)}} className='h-fit w-fit ml-2 border-[1px] rounded-full cursor-pointer'>
+                                                    <div onClick={() => {setSeeAll(false)}} className='h-fit w-fit ml-2 border-2 rounded-full cursor-pointer'>
                                                         <Cross />
                                                     </div>
 
-                                                </div>
+                                                </div> */}
                                             </div>
                                         )
 
