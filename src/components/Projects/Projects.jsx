@@ -126,29 +126,22 @@ function Projects() {
         if(name === 'path') {
             className = (e.target.parentElement.parentElement.parentElement.parentElement.classList)[1];
             tt = e.target.parentElement.parentElement.parentElement;
-            // console.log(tt);
             
         }
         else {
             className = (e.target.parentElement.parentElement.parentElement.classList)[1];
             tt = e.target.parentElement.parentElement;
-            // console.log(tt);
         }
 
         const downArrow = tt.children[0];
         const upArrow = tt.children[1];
-
-        console.log(downArrow);
-        console.log(upArrow);
         
         
         const project_parent = document.querySelectorAll(`.${className}`)[0];
         
         const childNode = (project_parent.children[1]).classList[0];
-        // console.log((project_parent.children[1]).classList);
         
         const temp = document.querySelectorAll(`.${childNode}`)[0];
-        // console.log(temp);
         
         temp.classList.add('notActive');
         temp.classList.remove('active');
