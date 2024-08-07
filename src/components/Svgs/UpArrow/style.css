@@ -1,6 +1,16 @@
-@media ((min-width:0px) and (max-width: 480px)) {}
+@media ((min-width:0px) and (max-width: 480px)) {
+    .upArrow_svg {
+            width: 15px;
+            height: 15px;
+        }
+}
 
-@media ((min-width:481px) and (max-width: 767px)) {}
+@media ((min-width:481px) and (max-width: 767px)) {
+    .upArrow_svg {
+            width: 16px;
+            height: 16px;
+        }
+}
 
 @media (min-width: 768px) and (max-width: 1000px) {}
 

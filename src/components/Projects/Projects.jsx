@@ -28,7 +28,56 @@ function Projects() {
             })
 
         })
+
+        const project_videos_mobile = document.querySelectorAll('.project_videos_mobile');
+        
+        project_videos_mobile.forEach((videos) => {
+            videos.addEventListener('mouseover', (e) => {
+                e.target.play(); 
+            })
+
+            videos.addEventListener('mouseleave', (e) => {
+                e.target.pause(); 
+            })
+
+        })
     }, [])
+
+    useEffect(() => {
+        const projects_wrapper = document.querySelectorAll('.projects_wrapper')[0];
+        const projects = document.querySelectorAll('.projects_desktop_mobile');
+        
+
+        projects.forEach((project) => {
+            
+            let top = window.scrollY;
+            let offset = project.offsetTop - (projects_wrapper.offsetHeight/2);
+
+            if(top >= offset) {
+                project.classList.add('appear_projects');
+            }
+            else {
+                project.classList.remove('appear_projects');
+            }
+        })
+
+        window.addEventListener('scroll', () => {
+            
+            projects.forEach((project) => {
+                let top = window.scrollY;
+                let offset = project.offsetTop-(projects_wrapper.offsetTop/2);
+                
+
+                if(top >= offset) {
+                    project.classList.add('appear_projects');
+                }
+                else {
+                    project.classList.remove('appear_projects');
+                }
+            })
+        })
+        
+    })
 
     const handleClickDown = (e) => {
         
@@ -112,81 +161,7 @@ function Projects() {
         
     }
 
-    // useEffect(() => {
-        
-    //     // console.log(arrow);
-    //     let downArrow = document.querySelectorAll('.downArrow')[0];
-    //     let upArrow = document.querySelectorAll('.upArrow')[0];
-        
-    //     downArrow.addEventListener('click', (e) => {
-    //     console.log(e.target);
-        
-    //     const className = (e.target.parentElement.parentElement.parentElement.classList)[1];
-    //     // console.log(className);
-        
-
-    //     const project_parent = document.querySelectorAll(`.${className}`)[0];
-        
-    //     const childNode = (project_parent.children[1]).classList[0];
-    //     // console.log((project_parent.children[1]).classList);
-        
-    //     const temp = document.querySelectorAll(`.${childNode}`)[0];
-    //     // console.log(temp);
-        
-    //     temp.classList.remove('max-h-0');
-    //     temp.classList.add('max-h-[500px]');
-
-    //     downArrow.classList.add('hidden');
-    //     upArrow.classList.remove('hidden');
-    // })
-
-    // upArrow.addEventListener('click', (e) => {
-    //     console.log(e.target);
-    //     const className = (e.target.parentElement.parentElement.parentElement.classList)[1];
-        
-    //     const project_parent = document.querySelectorAll(`.${className}`)[0];
-        
-    //     const childNode = (project_parent.children[1]).classList[0];
-    //     // console.log((project_parent.children[1]).classList);
-        
-    //     const temp = document.querySelectorAll(`.${childNode}`)[0];
-    //     // console.log(temp);
-        
-    //     temp.classList.add('max-h-0');
-    //     temp.classList.remove('max-h-[500px]');
-
-    //     downArrow.classList.remove('hidden');
-    //     upArrow.classList.add('hidden');
-    // })
-        
-    // }, [])
-
     
-    
-    // arrow.addEventListener('mouseclick', (e) => {
-    //     const className = (e.target.parentElement.parentElement.parentElement.classList)[1];
-        
-    //     const project_parent = document.querySelectorAll(`.${className}`)[0];
-    //     // console.log(className);
-        
-    //     const childNode = project_parent.children[1];
-    //     childNode.classList.remove('overflow-hidden');
-    //     childNode.classList.remove('h-[0]');
-    //     childNode.classList.add('h-fit');
-    // })
-
-    // const handleExpand = (e) => {
-    //     const className = (e.target.parentElement.parentElement.parentElement.classList)[1];
-        
-    //     const project_parent = document.querySelectorAll(`.${className}`)[0];
-    //     // console.log(className);
-        
-    //     const childNode = project_parent.children[1];
-    //     childNode.classList.remove('overflow-hidden');
-    //     childNode.classList.remove('h-[0]');
-    //     childNode.classList.add('h-fit');
-
-    // }
 
     return (
         <>
@@ -207,11 +182,11 @@ function Projects() {
                     
                 </div>
 
-                <div className='projects_wrapper_desktop'>
+                <div className='projects_wrapper'>
 
                     <div className="projects_parent_desktop">
 
-                        <div className="projects_desktop">
+                        <div className="projects_desktop projects_desktop_mobile">
 
                             <div className="projects_left_desktop">
                                 <div className="project_big_desktop project_diary_desktop">
@@ -299,7 +274,7 @@ function Projects() {
 
                         </div>
 
-                        <div className="projects_desktop">
+                        <div className="projects_desktop projects_desktop_mobile">
 
                             <div className="projects_left_desktop">
                                 <div className="project_medium_desktop video_portfolio_desktop">
@@ -386,7 +361,7 @@ function Projects() {
 
                         </div>
 
-                        <div className="projects_desktop">
+                        <div className="projects_desktop projects_desktop_mobile">
 
                             <div className="projects_left_desktop">
                                 <div className="project_big_desktop project_quillcraft_desktop">
@@ -469,7 +444,7 @@ function Projects() {
 
                         </div>
 
-                        <div className="projects_desktop">
+                        <div className="projects_desktop projects_desktop_mobile">
 
                             <div className="projects_left_desktop">
                                 <div className="project_medium_desktop video_connect_desktop">
@@ -552,6 +527,359 @@ function Projects() {
 
                         </div>
 
+                    </div>
+
+                    <div className='projects_parent_mobile'>
+
+                        <div className='projects_single_mobile projects_desktop_mobile'>
+                            
+                            <div className="projects_top_mobile">
+                                <div className="project_big_mobile project_diary_mobile">
+                                    
+                                    <video className='project_videos_mobile' src='videos/Diary.mp4' muted />
+                                    
+                                    <div className='project_details_diary_mobile notActive w-full transition-all duration-1000 ease-in-out'>
+                                        <div className='big_project_title_mobile'>
+                                            <p>Diary</p>
+                                        </div>
+                                        <div className='big_project_content_mobile'>
+                                            <p>Developed a fully-functional Notion clone, enabling users to create, edit, and organize notes and tasks with rich text formatting and real-time collaboration features. The application supports drag-and-drop capabilities, customizable templates, and seamless data synchronization across devices, providing a versatile workspace for both personal and team productivity.</p>
+                                            <br></br>
+                                            <p>Key Features :</p>
+                                            <li>Rich Text Editor</li>
+                                            <li>Task Management</li>
+                                            <li>Database Integration</li>
+                                            <li>User Authentication</li>
+                                            <br></br>
+                                            <p>Conclusion : </p>
+                                            <p>The Notion clone application built using Next.js and Tailwind CSS offers a robust solution for note-taking, task management, and collaboration. By utilizing modern web development frameworks and libraries, the project delivers a responsive and user-friendly interface that facilitates productivity and organization. The application aims to replicate and enhance the features of Notion, providing users with a powerful tool for managing their personal and professional tasks and projects.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className='project_tag_mobile'>
+                                        <Marquee speed={25} className='h-fit w-fit overflow-hidden'>
+                                            {
+                                                diary.map((tag, index) => (
+                                                    <span key={index} className='tag_big_span_mobile diary_tags_mobile flex-shrink-0 tracking-[0.1rem]'>{tag}</span>
+                                                ))
+                                            }
+                                        </Marquee>
+                                    </div>
+
+                                    <div className='w-full flex justify-center items-center relative'>
+                                            <button onClick={handleClickDown} className='downArrow big_arrow_mobile'>
+                                                <DownArrow />
+                                            </button>
+                                            <button onClick={handleClickUp} className='upArrow big_arrow_mobile hidden'>
+                                                <UpArrow />
+                                            </button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className='projects_single_mobile projects_desktop_mobile'>
+                            
+                            <div className="projects_right_mobile">
+                                <div className="project_big_mobile project_quill_mobile">
+                                    
+                                    <video className='project_videos_mobile' src='videos/Quill.mp4' muted />
+                                    
+                                    <div className='project_details_quill_mobile notActive w-full transition-all duration-1000 ease-in-out'>
+                                        <div className='big_project_title_mobile'>
+                                            <p>Quill</p>
+                                        </div>
+                                        <div className='big_project_content_mobile'>
+                                            <p>This project aims to develop an AI-powered web application using Next.js that can extract and provide accurate answers to user queries from PDF documents. Leveraging the capabilities of natural language processing (NLP) and machine learning, the application facilitates efficient and intelligent information retrieval from extensive PDF content.</p>
+                                            <br></br>
+                                            <p>Key Features : </p>
+                                            <li>PDF Upload and Parsing</li>
+                                            <li>Natural Language Query Processing</li>
+                                            <li>Interactive User Interface</li>
+                                            <br></br>
+                                            <p>Conclusion : </p>
+                                            <p>The AI-powered PDF answer extraction application built using Next.js offers an innovative solution for efficiently retrieving information from PDF documents. By combining advanced NLP and machine learning techniques with modern web development frameworks, the project aims to deliver a powerful tool for quick and accurate answer extraction, enhancing productivity and information accessibility.</p>
+                                            {/* <p>Created a platform where users can upload PDFs and receive accurate answers to their questions via embedded AI.Composed an AI system to provide precise and contextually relevant answers from uploaded PDFs. This project aims to develop an AI-powered web application using Next.js that can extract and provide accurate answers to user queries from PDF documents. Leveraging the capabilities of natural language processing (NLP).</p> */}
+                                        </div>
+                                    </div>
+                                    
+                                    <div className='project_tag_mobile'>
+                                        <Marquee speed={25} className='h-fit w-fit overflow-hidden'>
+                                            {
+                                                quill.map((tag, index) => (
+                                                    <span key={index} className='tag_big_span_mobile flex-shrink-0 tracking-widest'>{tag}</span>
+                                                ))
+                                            }
+                                        </Marquee>
+                                    </div>
+                                    
+                                    <div className='w-full flex justify-center items-center relative'>
+                                            <button onClick={handleClickDown} className='downArrow big_arrow_mobile'>
+                                                <DownArrow />
+                                            </button>
+                                            <button onClick={handleClickUp} className='upArrow big_arrow_mobile hidden'>
+                                                <UpArrow />
+                                            </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className='projects_double_mobile projects_desktop_mobile'>
+                            
+                            <div className="projects_bottom_mobile">
+                                <div className="project_medium_mobile project_blood_mobile">
+                                    <video className='project_videos_mobile' src='videos/BloodBank.mp4' muted />
+                                    <div className='project_details_blood_mobile notActive w-full transition-all duration-1000 ease-in-out'>
+                                        <div className='medium_project_title_mobile'>
+                                            <p>LifeFlow</p>
+                                        </div>
+                                        <div className='medium_project_content_mobile'>
+                                            <p>This project involves the development of a comprehensive blood donation application using the MERN stack (MongoDB, Express.js, React, and Node.js). The application is designed to connect blood donors with recipients, facilitating the process of blood donation and improving the efficiency of blood banks.</p>
+                                            <br></br>
+                                            <p>Key Features :</p>
+                                            <li>User Registration and Authentication</li>
+                                            <li>Donor and Recipient Profiles</li>
+                                            <li>Search and Match</li>
+                                            <br></br>
+                                            <p>Conclusion : </p>
+                                            <p>The blood donation application built using the MERN stack aims to improve the efficiency and effectiveness of the blood donation process. By leveraging modern web technologies, the application connects donors and recipients in a secure and user-friendly manner, enhancing the overall blood donation experience and contributing to saving lives.</p>
+                                        </div>
+                                    </div>
+                                    <div className='project_tag_mobile'>
+                                        <Marquee speed={25} className='h-fit w-fit overflow-hidden'>
+                                            {
+                                                bloodBank.map((tag, index) => (
+                                                    <span key={index} className='tag_medium_span_mobile flex-shrink-0 tracking-widest'>{tag}</span>
+                                                ))
+                                            }
+                                        </Marquee>
+                                    </div>
+                                    <div className='w-full flex justify-center items-center relative'>
+                                            <button onClick={handleClickDown} className='downArrow medium_arrow_mobile'>
+                                                <DownArrow />
+                                            </button>
+                                            <button onClick={handleClickUp} className='upArrow medium_arrow_mobile hidden'>
+                                                <UpArrow />
+                                            </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="projects_bottom_mobile">
+                                <div className="project_medium_mobile video_portfolio_mobile">
+                                    <video className='project_videos_mobile' src='videos/Portfolio.mp4' muted />
+                                    <div className='project_details_portfolio_mobile notActive w-full transition-all duration-1000 ease-in-out'>
+                                        <div className='medium_project_title_mobile'>
+                                            <p>Portfolio</p>
+                                        </div>
+                                        <div className='medium_project_content_mobile'>
+                                            <p>This project involves the development of a personal portfolio website using HTML, CSS, and JavaScript. The portfolio showcases personal projects, skills, and experiences, providing an interactive and visually appealing platform for individuals to present their work to potential employers or clients.</p>
+                                            <br></br>
+                                            <p>Key Features :</p>
+                                            <li>Project Showcase</li>
+                                            <li>Skills Display</li>
+                                            <li>Responsive Design</li>
+                                            <br></br>
+                                            <p>Conclusion : </p>
+                                            <p>The application aims to provide a comprehensive and engaging online showcase that reflects the individual’s personal brand and professional capabilities.</p>
+                                        </div>
+                                    </div>
+                                    <div className='project_tag_mobile'>
+                                        <Marquee speed={25} className='h-fit w-fit overflow-hidden'>
+                                            {
+                                                portfolio.map((tag, index) => (
+                                                    <span key={index} className='tag_medium_span_mobile flex-shrink-0 tracking-widest'>{tag}</span>
+                                                ))
+                                            }
+                                        </Marquee>
+                                    </div>
+                                    <div className='w-full flex justify-center items-center relative'>
+                                            <button onClick={handleClickDown} className='downArrow medium_arrow_mobile'>
+                                                <DownArrow />
+                                            </button>
+                                            <button onClick={handleClickUp} className='upArrow medium_arrow_mobile hidden'>
+                                                <UpArrow />
+                                            </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className='projects_double_mobile projects_desktop_mobile'>
+
+                            <div className="projects_left_mobile">
+                                <div className="project_medium_mobile video_connect_mobile">
+                                    <video className='project_videos_mobile one' src='videos/connect.mp4' muted />
+                                     <div className='project_details_connect_mobile notActive w-full transition-all duration-1000 ease-in-out'>
+                                        <div className='medium_project_title_mobile'>
+                                            <p>Connect</p>
+                                        </div>
+                                        <div className='medium_project_content_mobile'>
+                                            <p>This project involves the development of a secure chatting application using the MERN stack (MongoDB, Express.js, React, and Node.js). The application ensures the privacy and security of user communications through end-to-end encryption.</p>
+                                            <br></br>
+                                            <p>Key Features :</p>
+                                            <li>Real-time Messaging</li>
+                                            <li>End-to-End Encryption</li>
+                                            <li>User Authentication</li>
+                                            <br></br>
+                                            <p>Conclusion : </p>
+                                            <p>The secure chatting application leverages the power of the MERN stack to provide a reliable and encrypted messaging platform. By combining real-time communication with end-to-end encryption, the application aims to offer users a safe and private environment for their conversations.</p>
+                                        </div>
+                                    </div>
+                                    <div className='project_tag_mobile'>
+                                        <Marquee speed={25} className='h-fit w-fit overflow-hidden'>
+                                            {
+                                                connect.map((tag, index) => (
+                                                    <span key={index} className='tag_medium_span_mobile flex-shrink-0 tracking-widest'>{tag}</span>
+                                                ))
+                                            }
+                                        </Marquee>
+                                    </div>
+                                    <div className='w-full flex justify-center items-center relative'>
+                                            <button onClick={handleClickDown} className='downArrow medium_arrow_mobile'>
+                                                <DownArrow />
+                                            </button>
+                                            <button onClick={handleClickUp} className='upArrow medium_arrow_mobile hidden'>
+                                                <UpArrow />
+                                            </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="projects_right_mobile">
+                                <div className="project_medium_mobile video_weather_mobile">
+                                    <video className='project_videos_mobile' src='videos/Dynamic Weather.mp4' muted />
+                                    <div className='project_details_weather_mobile notActive w-full transition-all duration-1000 ease-in-out'>
+                                        <div className='medium_project_title_mobile'>
+                                            <p>Weather Forecast</p>
+                                        </div>
+                                        <div className='medium_project_content_mobile'>
+                                            <p>This project involves the development of a weather forecast teller application using Fetch API, CSS, and HTML. The application provides users with real-time and forecasted weather information for any specified location, offering a user-friendly and visually appealing interface to access weather details.</p>
+                                            <br></br>
+                                            <p>Key Features :</p>
+                                            <li>Real-Time Weather Data</li>
+                                            <li>Responsive Design</li>
+                                            <li>Forecast Information</li>
+                                            <br></br>
+                                            <p>Conclusion : </p>
+                                            <p>The weather forecast teller application built using Fetch API, CSS, and HTML offers a practical solution for accessing current and forecasted weather information. By leveraging the Fetch API for data retrieval and combining it with HTML and CSS for layout and styling, the project delivers a user-friendly and responsive tool for checking weather conditions.</p>
+                                        </div>
+                                    </div>
+                                    <div className='project_tag_mobile'>
+                                        <Marquee speed={25} className='h-fit w-fit overflow-hidden'>
+                                            {
+                                                weather.map((tag, index) => (
+                                                    <span key={index} className='tag_medium_span_mobile flex-shrink-0 tracking-widest'>{tag}</span>
+                                                ))
+                                            }
+                                        </Marquee>
+                                    </div>
+                                    <div className='w-full flex justify-center items-center relative'>
+                                            <button onClick={handleClickDown} className='downArrow medium_arrow_mobile'>
+                                                <DownArrow />
+                                            </button>
+                                            <button onClick={handleClickUp} className='upArrow medium_arrow_mobile hidden'>
+                                                <UpArrow />
+                                            </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className='projects_single_mobile projects_desktop_mobile'>
+
+                            <div className="projects_right_mobile">
+                                <div className="project_big_mobile project_blog_mobile">
+                                    <video className='project_videos_mobile' src='videos/BlogitOut.mp4' muted />
+                                    <div className='project_details_blog_mobile notActive w-full transition-all duration-1000 ease-in-out'>
+                                        <div className='big_project_title_mobile'>
+                                            <p>BlogitOut</p>
+                                        </div>
+                                        <div className='big_project_content_mobile'>
+                                            <p>Built a collaborative online writing platform that supports real-time editing blogs with user interactions for example liking, commenting, bookmarking blogs. This project focuses on the development of a comprehensive blogging application using the MERN stack . The application allows users to create, manage, and share blog posts while ensuring a seamless and interactive user experience.</p>
+                                            <br></br>
+                                            <p>Key Features :</p>
+                                            <li>User Authentication and Authorization</li>
+                                            <li>Blog Post Management</li>
+                                            <li>Commenting System</li>
+                                            <li>Likes and Reactions</li>
+                                            <br></br>
+                                            <p>Conclusion : </p>
+                                            <p>The blogging application built using the MERN stack offers a robust platform for users to express themselves and engage with a community. By leveraging the power of modern web technologies, the application ensures a seamless and interactive user experience, making it easy for users to create and manage content.</p>
+                                        </div>
+                                    </div>
+                                    <div className='project_tag_mobile'>
+                                        <Marquee speed={25} className='h-fit w-fit overflow-hidden'>
+                                            {
+                                                BlogitOut.map((tag, index) => (
+                                                    <span key={index} className='tag_big_span_mobile flex-shrink-0 tracking-widest'>{tag}</span>
+                                                ))
+                                            }
+                                        </Marquee>
+                                    </div>
+                                    <div className='w-full flex justify-center items-center relative'>
+                                            <button onClick={handleClickDown} className='downArrow big_arrow_mobile'>
+                                                <DownArrow />
+                                            </button>
+                                            <button onClick={handleClickUp} className='upArrow big_arrow_mobile hidden'>
+                                                <UpArrow />
+                                            </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className='projects_single_mobile projects_desktop_mobile'>
+
+                            <div className="projects_left_mobile">
+                                <div className="project_big_mobile project_quillcraft_mobile">
+                                    <video className='project_videos_mobile one' src='videos/QuillCraft.mp4' muted />
+                                    <div className='project_details_quillcraft_mobile notActive w-full transition-all duration-1000 ease-in-out'>
+                                        <div className='big_project_title_mobile'>
+                                            <p>QuillCraft</p>
+                                        </div>
+                                        <div className='big_project_content_mobile'>
+                                            <p>This project focuses on the development of a comprehensive blogging application using the MERN stack (MongoDB, Express.js, React, and Node.js). The application allows users to create, manage, and share blog posts while ensuring a seamless and interactive user experience.</p>
+                                            <br></br>
+                                            <p>Key Features :</p>
+                                            <li>User Authentication and Authorization</li>
+                                            <li>Blog Post Management</li>
+                                            <li>Commenting System</li>
+                                            <li>Likes and Reactions</li>
+                                            <br></br>
+                                            <p>Conclusion : </p>
+                                            <p>The blogging application built using the MERN stack offers a robust platform for users to express themselves and engage with a community. By leveraging the power of modern web technologies, the application ensures a seamless and interactive user experience, making it easy for users to create and manage content.</p>
+                                        </div>
+                                    </div>
+                                    <div className='project_tag_mobile'>
+                                        <Marquee speed={25} className='h-fit w-fit overflow-hidden'>
+                                            {
+                                                quillCraft.map((tag, index) => (
+                                                    <span key={index} className='tag_big_span_mobile flex-shrink-0 tracking-widest'>{tag}</span>
+                                                ))
+                                            }
+                                        </Marquee>
+                                    </div>
+                                    <div className='w-full flex justify-center items-center relative'>
+                                            <button onClick={handleClickDown} className='downArrow big_arrow_mobile'>
+                                                <DownArrow />
+                                            </button>
+                                            <button onClick={handleClickUp} className='upArrow big_arrow_mobile hidden'>
+                                                <UpArrow />
+                                            </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    
+                    
                     </div>
 
                 </div>

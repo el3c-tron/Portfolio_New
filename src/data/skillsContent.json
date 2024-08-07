@@ -2,42 +2,42 @@
     {
         "title" : "Portfolio",
         "description" : "Created a personal portfolio website to showcase projects, skills, and experiences, with a focus on responsive design and user-friendly navigation.My portfolio is a dynamic and responsive single-page application. It showcases my skills, projects, and professional background in an interactive and visually appealing manner.",
-        "tags" : ["ReactJS", "Javascript", "TailwindCSS"]
+        "tags" : ["ReactJs", "Javascript", "TailwindCSS"]
     },
     {
         "title" : "QuillCraft",
         "description" : "Built a collaborative online writing platform that supports real-time editing blogs with user interactions for example liking, commenting, bookmarking blogs. This project focuses on the development of a comprehensive blogging application using the MERN stack . The application allows users to create, manage, and share blog posts while ensuring a seamless and interactive user experience.",
-        "tags" : ["ReactJS", "MongoDB", "mongoose", "NodeJS", "Javascript", "ExpressJS", "TailwindCSS"]
+        "tags" : ["ReactJs", "MongoDB", "mongoose", "NodeJs", "Javascript", "ExpressJs", "TailwindCSS"]
     },
     {
        "title" : "User Registration (Backend)",
-       "description" : "Developed a scalable and efficient backend system using Node.js and Express, focusing on RESTful API design and database optimization. This project focuses on the development of a robust backend infrastructure using the MERN stack. The backend is designed to handle data management, user authentication, API creation, and seamless communication with the frontend, ensuring a secure and efficient application.",
-       "tags" : ["MongoDB", "mongoose", "NodeJS", "ExpressJS", "Javascript"] 
+       "description" : "Developed a scalable and efficient backend system using Node.Js and Express, focusing on RESTful API design and database optimization. This project focuses on the development of a robust backend infrastructure using the MERN stack. The backend is designed to handle data management, user authentication, API creation, and seamless communication with the frontend, ensuring a secure and efficient application.",
+       "tags" : ["MongoDB", "mongoose", "NodeJs", "ExpressJs", "Javascript"] 
     },
     {
         "title" : "Notion Clone",
         "description" : "Developed a fully-functional Notion clone, enabling users to create, edit, and organize notes and tasks with rich text formatting and real-time collaboration features. The application supports drag-and-drop capabilities, customizable templates, and seamless data synchronization across devices, providing a versatile workspace for both personal and team productivity.",
-        "tags" : ["NextJS", "mySQL", "Prisma", "Typescript", "TailwindCSS"]
+        "tags" : ["NextJs", "mySQL", "Prisma", "Typescript", "TailwindCSS"]
     },
     {
         "title" : "PDF Chatbot",
-        "description" : "Created a platform where users can upload PDFs and receive accurate answers to their questions via embedded AI.Composed an AI system to provide precise and contextually relevant answers from uploaded PDFs. This project aims to develop an AI-powered web application using Next.js that can extract and provide accurate answers to user queries from PDF documents. Leveraging the capabilities of natural language processing (NLP).",
-        "tags" : ["NextJS", "mySQL", "Prisma", "Typescript", "TailwindCSS"]
+        "description" : "Created a platform where users can upload PDFs and receive accurate answers to their questions via embedded AI.Composed an AI system to provide precise and contextually relevant answers from uploaded PDFs. This project aims to develop an AI-powered web application using Next.Js that can extract and provide accurate answers to user queries from PDF documents. Leveraging the capabilities of natural language processing (NLP).",
+        "tags" : ["NextJs", "mySQL", "Prisma", "Typescript", "TailwindCSS"]
     },
     {
         "title" : "LifeFlow",
         "description" : "This project involves the development of a comprehensive blood donation application using the MERN stack. The application is designed to connect blood donors with recipients, facilitating the process of blood donation and improving the efficiency of blood banks. The blood donation application built using the MERN stack aims to improve the efficiency and effectiveness of the blood donation process.",
-        "tags" : ["EJS", "MongoDB", "Javascript", "mongoose", "NodeJS", "ExpressJS", "CSS"]
+        "tags" : ["EJs", "MongoDB", "Javascript", "mongoose", "NodeJs", "ExpressJs", "CSS"]
     },
     {
         "title" : "Connect",
         "description" : "Enabled users to connect and communicate seamlessly through web-based chat. Implemented end-to-end encryption using the Diffie-Hellman key exchange and AES-256 encryption algorithms to secure users messages. The secure chatting application provide a reliable and encrypted messaging platform. By combining real-time communication with end-to-end encryption.",
-        "tags" : ["ReactJS", "MongoDB", "mongoose", "NodeJS", "ExpressJS", "Javascript", "Socket.io", "Encryption", "CSS"]
+        "tags" : ["ReactJs", "MongoDB", "mongoose", "NodeJs", "ExpressJs", "Javascript", "Socket.io", "Encryption", "CSS"]
     },
     {
         "title" : "BlogItOut",
         "description" : "Built a collaborative online writing platform that supports real-time editing blogs with user interactions for example liking, commenting, bookmarking blogs. This project focuses on the development of a comprehensive blogging application using the MERN stack . The application allows users to create, manage, and share blog posts while ensuring a seamless and interactive user experience.",
-        "tags" : ["EJS", "NodeJS", "ExpressJS", "MongoDB", "mongoose", "Javascript", "CSS"]
+        "tags" : ["EJs", "NodeJs", "ExpressJs", "MongoDB", "mongoose", "Javascript", "CSS"]
     },
     {
         "title" : "Snake Game",
@@ -47,12 +47,12 @@
     {
         "title" : "Password Generator",
         "description" : "Developed a secure password generator to create strong, random passwords. This project involves the development of a password generator application using React. The application provides users with a simple and intuitive interface to generate secure and random passwords based on selected criteria such as length, inclusion of special characters, numbers, and uppercase/lowercase letters.",
-        "tags" : ["ReactJS", "TailwindCSS", "Javascript"]
+        "tags" : ["ReactJs", "TailwindCSS", "Javascript"]
     },
     {
         "title" : "Currency Converter",
         "description" : "Implemented a currency converter tool that allows users to convert between different currencies with real-time exchange rates. This project involves the development of a currency converter application using React. The application provides users with a simple and efficient way to convert amounts between different currencies using real-time exchange rates.",
-        "tags" : ["ReactJS", "TailwindCSS", "Javascript"]
+        "tags" : ["ReactJs", "TailwindCSS", "Javascript"]
     },
     {
         "title" : "Weather Report",
