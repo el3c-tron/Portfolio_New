@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Home, Loading, Projects, Skills_NRM, Skills_TML, Test } from "./components"
+import { Footer, Home, Loading, Projects, Skills_NRM, Skills_TML } from "./components"
 
 function App() {
 
@@ -21,6 +21,7 @@ function App() {
         (overview) ? (<Skills_NRM setOverview = {setOverview} />) : (<Skills_TML setOverview = {setOverview} />)
       }
       <Projects />
+      <Footer />
 
       {/* <Test /> */}
       

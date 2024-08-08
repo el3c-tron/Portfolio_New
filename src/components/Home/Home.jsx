@@ -31,7 +31,7 @@ function Home() {
 
                     <div className='home_button_parent flex flex-col'>
                         <button className='home_button hover:shadow-shadow-[0px_0px_10px_2px_#1a8dff3c] hover:opacity-90 rounded-md shadow-[0px_0px_20px_5px_#1a8dff3c] leading-[20px] cursor-pointer transition-all ease-in-out duration-[0.3s] text-white font-semibold tracking-widest'>
-                            Hire Me
+                            Resume
                         </button>
 
                     </div>
