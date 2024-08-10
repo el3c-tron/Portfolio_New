@@ -7,6 +7,11 @@ import { Board } from '../Svgs'
 
 function Home() {
 
+    const handleResume = () => {
+        window.open('https://drive.google.com/file/d/1CoxjpupenHXogslXIM-FGraVBe0y_0ci/view?usp=sharing', '_blank');
+        return;
+    }
+
     return (
         <>
             <div className='home_container flex w-full overflow-hidden'>
@@ -30,7 +35,7 @@ function Home() {
                     </div>
 
                     <div className='home_button_parent flex flex-col'>
-                        <button className='home_button hover:shadow-shadow-[0px_0px_10px_2px_#1a8dff3c] hover:opacity-90 rounded-md shadow-[0px_0px_20px_5px_#1a8dff3c] leading-[20px] cursor-pointer transition-all ease-in-out duration-[0.3s] text-white font-semibold tracking-widest'>
+                        <button onClick={handleResume} className='home_button hover:shadow-shadow-[0px_0px_10px_2px_#1a8dff3c] hover:opacity-90 rounded-md shadow-[0px_0px_20px_5px_#1a8dff3c] leading-[20px] cursor-pointer transition-all ease-in-out duration-[0.3s] text-white font-semibold tracking-widest'>
                             Resume
                         </button>
 
