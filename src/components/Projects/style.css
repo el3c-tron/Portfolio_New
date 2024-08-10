@@ -622,7 +622,7 @@
     }
 }
 
-@media (min-width: 1001px) and (max-width: 1280px) {
+@media (min-width: 1000px) and (max-width: 1280px) {
     .projects_parent_mobile {
         display: none;
     }
@@ -642,9 +642,9 @@
         /* border: 2px solid black; */
     }
 
-    .projects_parent_mobile {
+    .projects_parent_desktop {
         /* border: 2px solid black; */
-        padding: 2rem 1rem;
+        padding: 2rem 0rem;
         display: flex;
         flex-direction: column;
         align-items: center;

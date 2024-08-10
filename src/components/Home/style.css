@@ -252,7 +252,7 @@
     .home_content {
         width: fit-content;
         margin-left: 2rem;
-        margin-top: 6rem;
+        margin-top: 4rem;
     }
 
     .home_content_first {
@@ -272,7 +272,7 @@
     .home_button_parent {
         width: fit-content;
         margin-left: 2rem;
-        margin-top: 6rem;
+        margin-top: 4rem;
     }
 
     .home_button {
@@ -299,7 +299,13 @@
     }
 
     .home_parent {
-        width: 450px;
+        width: 380px;
+    }
+    .home_sidebar {
+        margin-top: 2rem;
+    }
+    .home_sidebar_one {
+        height: 40px;
     }
 }
 
@@ -373,6 +379,12 @@
     }
     .home_parent {
         width: 500px;
+    }
+    .home_sidebar {
+        margin-top: 4rem;
+    }
+    .home_sidebar_one {
+        height: 90px;
     }
 
     

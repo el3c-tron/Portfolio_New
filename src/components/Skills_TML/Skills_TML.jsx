@@ -188,7 +188,7 @@ function Skills_TML({setOverview}) {
 
   return (
     <>
-      <div className="tml_stars_container">
+      <div className="tml_stars_container overflow-hidden">
         <div className="tml_container h-screen w-full flex flex-col">
           <div className='tml_sidebar_one items-end w-screen h-fit ml-[4.25rem] '>
               <div className='flex h-fit'>
@@ -302,7 +302,7 @@ function Skills_TML({setOverview}) {
                     </div>
 
                     <div className='tml_switch_parent_desktop flex flex-col justify-center items-center'>
-                        <p className='tml_switch_p_desktop text-white font-light text-[14px] tracking-[3px]'>switch to overview mode</p>
+                        <p className='tml_switch_p_desktop text-white font-light tracking-[3px]'>switch to overview mode</p>
                         <div onClick={handleComponentChange} className='tml_switch_desktop cursor-pointer mt-2 rounded-md flex justify-end items-center pl-3 pr-3'>
                             <div className='tml_inner_switch_desktop rounded-md shadow-[0px_0px_10px_5px_#ffadad50] bg-[#FFADAD] '></div>
                         </div>

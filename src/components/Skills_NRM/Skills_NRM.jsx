@@ -215,7 +215,7 @@ function Skills_NRM({setOverview}) {
                                 </div>
 
                                 <div className='switch_parent_desktop flex flex-col justify-center items-center'>
-                                    <p className='switch_p_desktop text-white font-light text-[14px] tracking-[3px]'>switch to timeline mode</p>
+                                    <p className='switch_p_desktop text-white font-light tracking-[3px]'>switch to timeline mode</p>
                                     <div onClick={handleComponentChange} className='switch_desktop cursor-pointer mt-2 rounded-md flex justify-start items-center pl-3 pr-3'>
                                         <div className='inner_switch_desktop rounded-md shadow-[0px_0px_10px_5px_#1a8dff4e] bg-[#1a8cff] '></div>
                                     </div>

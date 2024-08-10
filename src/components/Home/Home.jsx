@@ -41,14 +41,14 @@ function Home() {
 
                     </div>
 
-                    <div className='home_sidebar ml-[3.8rem] mt-[4rem]'>
+                    <div className='home_sidebar ml-[3.8rem]'>
 
                         <div className='flex ml-[6.3px]'>
                             <div className='border-[3.5px] border-black rotate-45'></div>
                         </div>
 
-                        <div className='overflow-hidden flex ml-[8px]'>
-                            <div className='h-[90px] border-[2px] border-black '></div>
+                        <div className='home_sidebar_one overflow-hidden flex ml-[8px]'>
+                            <div className='h-full border-[2px] border-black '></div>
                         </div>
 
                         <div>
@@ -57,8 +57,8 @@ function Home() {
                             </p>
                         </div>
 
-                        <div className='overflow-hidden flex ml-[8px] h-full'>
-                            <div className='h-screen border-[2px] border-black '></div>
+                        <div className='overflow-hidden flex ml-[8px] h-screen'>
+                            <div className='h-full border-[2px] border-black '></div>
                         </div>
 
                         

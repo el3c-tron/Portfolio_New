@@ -497,7 +497,7 @@
         flex-direction: column;
         font-weight: 700;
         letter-spacing: .8rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-shadow: 0px 0px 5px rgba(26, 140, 255, .3);
         margin-right: 4rem;
         height: 2rem;
@@ -517,7 +517,7 @@
         flex-direction: column;
         font-weight: 600;
         letter-spacing: .5rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-shadow: 0px 0px 5px rgba(255, 255, 255, .3);
         margin-left: 2rem;
         height: 2rem;
@@ -529,8 +529,8 @@
     .timeline_content_parent_desktop {
         box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .5);
         border: 1px solid rgba(255, 255, 255, 1);
-        height: 350px;
-        width: 470px;
+        height: 300px;
+        width: 450px;
         margin-left: 8rem;
     }
 
@@ -553,7 +553,7 @@
         /* padding: .5rem; */
         font-weight: 600;
         letter-spacing: .2rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: #E69C9C;
         text-shadow: 0px 0px 2px #E69C9C;
     }
@@ -562,25 +562,26 @@
         /* border: 2px solid white; */
         /* padding: .5rem; */
         font-weight: 200;
-        font-size: 14px;
+        font-size: 12px;
         letter-spacing: 1px;
 
     }
 
     .project_text_desktop {
         font-weight: 400;
-        font-size: 14px;
+        font-size: 12px;
         margin-right: 4px;
 
     }
 
     .project_tags_desktop {
-        font-weight: 200;
-        font-size: 14px;
-        padding: 4px 6px;
-        margin-left: 6px;
-        letter-spacing: 1.5px;
-        background-color: rgba(23, 27, 29, .7);
+        font-weight: 400;
+        font-size: 10px;
+        padding: .5rem 1rem;
+        margin-left: 1rem;
+        letter-spacing: 1.7px;
+        background-color: rgba(23, 27, 29, .5);
+        text-shadow: 0px 0px 1px rgba(255, 255, 255, .3);
     }
 
     .timeline_content_view {
@@ -599,7 +600,7 @@
         color: white;
         font-weight: 700;
         letter-spacing: .5rem;
-        font-size: .8rem;
+        font-size: .6rem;
     }
 
     .scroll_button_desktop {
@@ -609,7 +610,24 @@
         font-weight: 700;
         letter-spacing: 0.1em;
         border-radius: 0.375rem;
-        font-size: .8rem;
+        font-size: .6rem;
+    }
+
+    .tml_switch_p_desktop {
+        font-size: 10px;
+    }
+
+    .tml_switch_desktop {
+        width: 90px;
+        height: 30px;
+        box-shadow: inset rgba(0, 0, 0, .4) 0px 0px 20px 10px;
+        transition: all .3s ease-in-out;
+    }
+
+    .tml_inner_switch_desktop {
+        width: 18px;
+        height: 18px;
+        transition: all .3s ease-in-out;
     }
     
 
@@ -764,6 +782,23 @@
         font-size: .8rem;
     }
 
+    .tml_switch_desktop {
+        width: 120px;
+        height: 40px;
+        box-shadow: inset rgba(0, 0, 0, .4) 0px 0px 20px 10px;
+        transition: all .3s ease-in-out;
+    }
+
+    .tml_inner_switch_desktop {
+        width: 24px;
+        height: 24px;
+        transition: all .3s ease-in-out;
+    }
+
+    .tml_switch_p_desktop {
+        font-size: 14px;
+    }
+
     
 }
 
@@ -804,19 +839,6 @@
 
 .page_transition_TML {
     animation: animatePage_TML 1s forwards;
-}
-
-.tml_switch_desktop {
-    width: 120px;
-    height: 40px;
-    box-shadow: inset rgba(0, 0, 0, .4) 0px 0px 20px 10px;
-    transition: all .3s ease-in-out;
-}
-
-.tml_inner_switch_desktop {
-    width: 24px;
-    height: 24px;
-    transition: all .3s ease-in-out;
 }
 
 .tml_switch_mobile {

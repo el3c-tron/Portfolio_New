@@ -147,7 +147,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
     }
 
     .icons_parent_desktop {
@@ -181,6 +180,23 @@
 
     .nrm_icons_mobile {
         display: none;
+    }
+
+    .switch_p_desktop {
+        font-size: 10px;
+    }
+
+    .switch_desktop {
+        width: 90px;
+        height: 30px;
+        box-shadow: inset rgba(0, 0, 0, .4) 0px 0px 20px 10px;
+        transition: all .3s ease-in-out;
+    }
+
+    .inner_switch_desktop {
+        width: 18px;
+        height: 18px;
+        transition: all .3s ease-in-out;
     }
 }
 
@@ -225,6 +241,20 @@
         justify-content: space-around;
         margin-bottom: .5rem;
         margin-top: .5rem;
+    }
+    .switch_p_desktop {
+        font-size: 14px;
+    }
+    .switch_desktop {
+        width: 120px;
+        height: 40px;
+        box-shadow: inset rgba(0, 0, 0, .4) 0px 0px 20px 10px;
+        transition: all .3s ease-in-out;
+    }
+    .inner_switch_desktop {
+        width: 24px;
+        height: 24px;
+        transition: all .3s ease-in-out;
     }
     
     
@@ -286,18 +316,8 @@
     animation: animatePage_NRM 1s forwards;
 }
 
-.switch_desktop {
-    width: 120px;
-    height: 40px;
-    box-shadow: inset rgba(0, 0, 0, .4) 0px 0px 20px 10px;
-    transition: all .3s ease-in-out;
-}
 
-.inner_switch_desktop {
-    width: 24px;
-    height: 24px;
-    transition: all .3s ease-in-out;
-}
+
 
 .switch_mobile {
     width: 60px;
