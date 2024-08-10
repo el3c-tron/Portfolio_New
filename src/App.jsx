@@ -3,7 +3,7 @@ import { Footer, Home, Loading, Projects, Skills_NRM, Skills_TML } from "./compo
 
 function App() {
 
-  const [loading ,setLoading] = useState(false);
+  const [loading ,setLoading] = useState(true);
   const [overview, setOverview] = useState(true);
 
   useEffect(() => {
