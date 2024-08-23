@@ -622,7 +622,7 @@
     }
 }
 
-@media (min-width: 1000px) and (max-width: 1280px) {
+@media (min-width: 1000px) and (max-width: 1399px) {
     .projects_parent_mobile {
         display: none;
     }
@@ -839,7 +839,7 @@
     }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1400px) {
     .projects_parent_mobile {
         display: none;
     }
